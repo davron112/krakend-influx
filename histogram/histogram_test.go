@@ -3,7 +3,7 @@ package histogram
 import (
 	"testing"
 
-	metrics "github.com/krakendio/krakend-metrics/v2"
+	metrics "github.com/davron112/krakend-metrics/v2"
 )
 
 func Test_isEmpty(t *testing.T) {
