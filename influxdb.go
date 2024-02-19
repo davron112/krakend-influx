@@ -5,17 +5,16 @@ import (
 	"os"
 	"time"
 
+	"github.com/davron112/krakend-influx/v2/counter"
+	"github.com/davron112/krakend-influx/v2/gauge"
+	"github.com/davron112/krakend-influx/v2/histogram"
 	ginmetrics "github.com/davron112/krakend-metrics/v2/gin"
 	"github.com/davron112/lura/v2/config"
 	"github.com/davron112/lura/v2/logging"
 	"github.com/influxdata/influxdb/client/v2"
-
-	"github.com/davron112/krakend-influx/v2/counter"
-	"github.com/davron112/krakend-influx/v2/gauge"
-	"github.com/davron112/krakend-influx/v2/histogram"
 )
 
-const Namespace = "github_com/letgoapp/krakend-influx"
+const Namespace = "github_com/davron112/krakend-influx"
 const logPrefix = "[SERVICE: InfluxDB]"
 
 type clientWrapper struct {

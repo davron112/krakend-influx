@@ -3,7 +3,7 @@ To load the extension into KrakenD you need to specify it in the extra_config se
 ```
 "extra_config":{
 ...
-"github_com/letgoapp/krakend-influx":{
+"github_com/davron112/krakend-influx":{
       "address":"http://192.168.99.9:8086",
       "ttl":"25s",
       "buffer_size":0
@@ -19,7 +19,7 @@ The necessary parameters are:
 For this to work you need to have krakend-metric activated as well in extra_config:
 ```
 ...
-"github_com/devopsfaith/krakend-metrics": {
+"github_com/davron112/krakend-metrics": {
         "collection_time": "30s",
         "listen_address": "127.0.0.1:8090"
     }
@@ -28,4 +28,3 @@ For this to work you need to have krakend-metric activated as well in extra_conf
 The collection_time and ttl parameters are strongly linked. The module krakend-metrics collects the metrics every **collection_time**, while krakend-influxdb checks every **ttl** if there are collected points to be sent.
 
 You can find an example configuration in this folder as well as a dashboard JSON file for Grafana 5.0+.
- 
