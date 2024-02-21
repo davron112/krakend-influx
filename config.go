@@ -19,7 +19,7 @@ type influxConfig struct {
 func configGetter(extraConfig config.ExtraConfig) (influxConfig, error) {
 	cfg := influxConfig{
 		ttl:      time.Minute,
-		database: "krakend",
+		database: "gateway",
 	}
 
 	castedConfig, ok := extraConfig[Namespace].(map[string]interface{})
